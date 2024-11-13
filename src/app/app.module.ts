@@ -29,7 +29,7 @@ import { MatCardModule } from '@angular/material/card';
 
 //Componentes do projeto
 import { NavComponent } from './components/nav/nav.component';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -59,6 +59,7 @@ import { NavComponent } from './components/nav/nav.component';
     MatCardModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
