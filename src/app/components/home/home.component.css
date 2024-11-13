@@ -1,10 +1,50 @@
+/* Estilos gerais para o cartão */
 .card {
-    width: 90%;
+    width: 92%;
     margin: auto;
     background-color: rgb(235, 235, 235);
-}
+  }
 
-img {
-    height: 20rem;
-    
+  img {
+    height: 25rem;
 }
+  
+  /* Estilos do título e subtítulo */
+  mat-card-header {
+    background-color: #585af7; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto no cabeçalho */
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0; /* Bordas arredondadas só no topo */
+  }
+  
+  mat-card-title {
+    font-size: 2.0em !important; /* Tamanho de fonte do título */
+    font-weight: bold;
+  }
+  
+  mat-card-subtitle {
+    font-size: 1.2em; /* Tamanho de fonte do subtítulo */
+    margin-top: 15px !important;
+  }
+  
+  /* Estilos para o conteúdo do cartão */
+  mat-card-content {
+    padding: 20px;
+    font-size: 1.1em; /* Tamanho do texto */
+    line-height: 1.6; /* Espaçamento entre as linhas */
+    color: #333; /* Cor do texto */
+    text-align: justify; /* Justifica o texto */
+  }
+  
+  /* Ajustes de espaçamento e margens nos parágrafos */
+  mat-card-content p {
+    margin-bottom: 15px; /* Espaçamento entre os parágrafos */
+  }
+
+  
+  /* Botões e ações do cartão */
+  mat-card-actions {
+    display: flex;
+    justify-content: flex-start; /* Alinha os botões à esquerda */
+    padding: 10px 0;
+  }
