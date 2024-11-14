@@ -33,6 +33,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FuncionarioListComponent } from './components/funcionario/funcionario-list/funcionario-list.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { FuncionarioListComponent } from './components/funcionario/funcionario-l
     NavComponent,
     HomeComponent,
     HeaderComponent,
-    FuncionarioListComponent
+    FuncionarioListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

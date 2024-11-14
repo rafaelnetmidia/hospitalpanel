@@ -1,0 +1,20 @@
+<div class="container" >
+  <form class="form mat-elevation-z8">
+
+    <h1>Sistema de Gestão Hospitalar</h1>
+    <img src="assets/img/login.svg" alt="Sistema de Gestão Hospitalar">
+
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>usuario</mat-label>
+      <input [formControl]="login" [(ngModel)]="verify.login" required name="login" matInput placeholder="Ex. user" >
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>senha</mat-label>
+      <input [formControl]="senha" [(ngModel)]="verify.senha" required name="senha" type="password" matInput placeholder="Ex. 123" >
+    </mat-form-field>
+
+    <button [disabled]="!validaLogin()" class="full-width mat-elevation-z2" mat-stroked-button color="primary">ENTRAR</button>
+
+  </form>
+</div>
