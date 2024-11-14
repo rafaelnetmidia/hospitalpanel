@@ -32,13 +32,15 @@ import { NavComponent } from './components/nav/nav.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FuncionarioListComponent } from './components/funcionario/funcionario-list/funcionario-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    FuncionarioListComponent
   ],
   imports: [
     BrowserModule,
