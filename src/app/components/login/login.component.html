@@ -14,7 +14,7 @@
       <input [formControl]="senha" [(ngModel)]="verify.senha" required name="senha" type="password" matInput placeholder="Ex. 123" >
     </mat-form-field>
 
-    <button [disabled]="!validaLogin()" class="full-width mat-elevation-z2" mat-stroked-button color="primary">ENTRAR</button>
+    <button (click)="logar()" [disabled]="!validaLogin()" class="full-width mat-elevation-z2" mat-stroked-button color="primary">ENTRAR</button>
 
   </form>
 </div>
