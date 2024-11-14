@@ -1,12 +1,12 @@
 /* Estilos gerais para o cartão */
 .card {
     width: 92%;
-    margin: auto;
+    margin: 1rem auto;
     background-color: rgb(235, 235, 235);
   }
 
   img {
-    height: 25rem;
+    height: 20rem;
 }
   
   /* Estilos do título e subtítulo */
