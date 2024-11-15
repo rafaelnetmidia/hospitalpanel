@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Toast, ToastrService } from 'ngx-toastr';
 import { LoginDTO } from 'src/app/models/loginDTO';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,14 +13,18 @@ import { LoginDTO } from 'src/app/models/loginDTO';
 export class LoginComponent implements OnInit {
 
   verify: LoginDTO = {
-    login: '',
-    senha: ''
+    username: '',
+    password: ''
   }
 
   login = new FormControl(null, [Validators.minLength(10), Validators.maxLength(20)])
   senha = new FormControl(null, Validators.minLength(8))
 
-  constructor(private toast: ToastrService ) { }
+  constructor(
+    private toast: ToastrService,
+    private service: AuthService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
@@ -28,9 +34,13 @@ export class LoginComponent implements OnInit {
   }
 
   logar() {
-    this.toast.error('usuario e/ou senh invalidos!', 'Login');
-    this.verify.login = '';
-    this.verify.senha = '';
+    this.service.autenticate(this.verify).subscribe(response => {
+      this.service.successfullLogin(response.headers.get('Authorization').substring(7));
+      this.router.navigate(['']);
+
+    }, () => {
+      this.toast.error('Usuário e/ou senha inválidos')
+    });
   }
 
 }
