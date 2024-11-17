@@ -35,6 +35,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FuncionarioListComponent } from './components/funcionario/funcionario-list/funcionario-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { Toast, ToastrModule } from 'ngx-toastr';
+import { AuthInterceptorProviders } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,7 @@ import { Toast, ToastrModule } from 'ngx-toastr';
       progressAnimation: 'decreasing'
     })
   ],
-  providers: [],
+  providers: [AuthInterceptorProviders],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
