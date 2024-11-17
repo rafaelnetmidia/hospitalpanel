@@ -36,6 +36,7 @@ import { FuncionarioListComponent } from './components/funcionario/funcionario-l
 import { LoginComponent } from './components/login/login.component';
 import { Toast, ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProviders } from './interceptors/auth.interceptor';
+import { FuncionarioCreateComponent } from './components/funcionario/funcionario-create/funcionario-create.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AuthInterceptorProviders } from './interceptors/auth.interceptor';
     HomeComponent,
     HeaderComponent,
     FuncionarioListComponent,
-    LoginComponent
+    LoginComponent,
+    FuncionarioCreateComponent
   ],
   imports: [
     BrowserModule,
