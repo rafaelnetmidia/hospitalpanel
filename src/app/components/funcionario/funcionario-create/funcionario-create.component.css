@@ -31,3 +31,7 @@ button{
 div{
     margin-top: 3rem;
 }
+
+mat-icon{
+    opacity: 0.8;
+}

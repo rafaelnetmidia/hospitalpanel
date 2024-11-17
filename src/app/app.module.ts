@@ -37,6 +37,7 @@ import { LoginComponent } from './components/login/login.component';
 import { Toast, ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProviders } from './interceptors/auth.interceptor';
 import { FuncionarioCreateComponent } from './components/funcionario/funcionario-create/funcionario-create.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { FuncionarioCreateComponent } from './components/funcionario/funcionario
       closeButton: true,
       progressBar:true,
       progressAnimation: 'decreasing'
-    })
+    }),
+    NgxMaskModule.forRoot()
   ],
   providers: [AuthInterceptorProviders],
   bootstrap: [AppComponent],
