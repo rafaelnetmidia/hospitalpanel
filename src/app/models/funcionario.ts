@@ -1,7 +1,8 @@
 export interface Funcionario {
-    id?: any;
-    nome: string;
+    idEmployee?: any;
+    name: string;
     cpf: string;
-    email: string;
+    rg: string;
+    telephone: string;
 
 }
