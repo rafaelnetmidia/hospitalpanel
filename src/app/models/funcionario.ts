@@ -4,5 +4,5 @@ export interface Funcionario {
     cpf: string;
     rg: string;
     telephone: string;
-
+    idPosition: any;
 }

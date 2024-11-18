@@ -17,6 +17,10 @@ export class FuncionarioService {
     return this.http.get<Funcionario[]>(`${API_CONFIG.baseUrl}/employees`);
   }
 
+  create(funcionario: Funcionario): Observable<Funcionario> {
+    return this.http.post<Funcionario>(`${API_CONFIG.baseUrl}/employees/register`, funcionario);
+  }
+
 
 
 }
